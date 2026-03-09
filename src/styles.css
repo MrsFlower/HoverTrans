@@ -1,0 +1,35 @@
+/* 让整个网页背景完全透明 */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: transparent !important;
+  font-family: sans-serif;
+  overflow: hidden; /* 防止出现滚动条 */
+}
+
+/* 我们的悬浮翻译卡片样式 */
+.translation-card {
+  width: 360px;
+  height: 200px;
+  margin: 20px auto; /* 留出外边距，给阴影显示空间 */
+  background-color: rgba(255, 255, 255, 0.95); /* 半透明毛玻璃质感白底 */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 悬浮阴影 */
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* macOS/Win11 毛玻璃效果 */
+}
+
+/* 自定义拖拽区域：因为去掉了系统标题栏，必须告诉 Tauri 哪里可以拖动 */
+.drag-handle {
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 12px;
+  color: #666;
+}
