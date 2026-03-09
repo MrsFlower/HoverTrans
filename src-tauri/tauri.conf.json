@@ -1,0 +1,17 @@
+{
+  "tauri": {
+    "windows": [
+      {
+        "title": "HoverTrans",
+        "width": 400,
+        "height": 250,
+        "decorations": false,   // 【关键】隐藏系统默认的标题栏和边框
+        "transparent": true,    // 【关键】允许窗口背景透明
+        "alwaysOnTop": true,    // 【关键】让窗口始终悬浮在最顶层
+        "skipTaskbar": true,    // 【可选】在任务栏隐藏图标，更符合小工具的设定
+        "center": true
+      }
+    ]
+    // ... 其他配置
+  }
+}
